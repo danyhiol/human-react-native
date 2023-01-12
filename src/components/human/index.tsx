@@ -1,4 +1,4 @@
-import '@tensorflow/tfjs-react-native';
+import * as tf from '@tensorflow/tfjs'; // must be imported before tfjs-react-native
 
 import {
     Human,
@@ -10,7 +10,7 @@ import { Text, View } from 'react-native';
 // @ts-ignore
 export const humanConfig: Config = {
     cacheSensitivity: 0,
-    modelBasePath: '../../models',
+    modelBasePath: 'https://cdn.jsdelivr.net/npm/@vladmandic/human/models',
     filter: { enabled: true, equalization: true, brightness: 0.8 }, // lets run with histogram equalizer
     debug: true,
     face: {
@@ -49,7 +49,7 @@ export const options = {
 
 const human = new Human(humanConfig);
 
-export const HumanText = () => {
+export const HumanTest = () => {
     const init = async () => {
         console.log(
             'human version:',

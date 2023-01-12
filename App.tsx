@@ -3,14 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 // import FaceID from './src/components/face-id';
 import { NativeBaseProvider } from 'native-base';
 
-import { HumanText } from './src/components/human';
+import { HumanTest } from './src/components/human';
 
 export default function App() {
   return (
     <NativeBaseProvider>
       <View style={styles.container}>
         <Text>Human React-Native-Test</Text>
-        <HumanText />
+        <HumanTest />
         <StatusBar style="auto" />
       </View>
     </NativeBaseProvider>
